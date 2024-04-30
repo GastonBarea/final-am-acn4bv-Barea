@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Peluquería</string>
+    <string name="texto_bienvenidaUsuario">Bienvenido usuario@</string>
+    <string name="boton_NuevaReserva">Nueva reserva</string>
 </resources>
