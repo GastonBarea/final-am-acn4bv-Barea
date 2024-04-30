@@ -36,6 +36,7 @@
 
     <Button
         android:id="@+id/boton_NuevaReserva"
+        android:onClick="aReserva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/boton_NuevaReserva"
