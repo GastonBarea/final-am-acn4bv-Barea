@@ -7,26 +7,81 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="271dp" />
+
     <TextView
         android:id="@+id/bienvenidaUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/texto_bienvenidaUsuario"
-        app:layout_constraintBottom_toTopOf="@+id/scrollViewPrincipal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="24dp" />
+
+    <TextView
+        android:id="@+id/Titulo_reservas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Reservas_principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Mis_daros_de_contacto"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="66dp"
+        android:layout_height="48dp"
+
+        app:icon="@android:drawable/ic_menu_edit"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_gallery"
+        tools:layout_editor_absoluteX="185dp"
+        tools:layout_editor_absoluteY="220dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="232dp"
+        tools:layout_editor_absoluteY="244dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="238dp"
+        tools:layout_editor_absoluteY="284dp" />
 
     <ScrollView
         android:id="@+id/scrollViewPrincipal"
-        android:layout_width="405dp"
-        android:layout_height="473dp"
+        android:layout_width="395dp"
+        android:layout_height="292dp"
         android:background="#E2E4E4"
         app:layout_constraintBottom_toTopOf="@+id/boton_NuevaReserva"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bienvenidaUsuario">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,14 +91,12 @@
 
     <Button
         android:id="@+id/boton_NuevaReserva"
-        android:onClick="aReserva"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="aReserva"
         android:text="@string/boton_NuevaReserva"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bienvenidaUsuario"
-        app:layout_constraintVertical_bias="0.816" />
+        tools:layout_editor_absoluteY="651dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
