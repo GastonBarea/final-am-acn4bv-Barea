@@ -2,6 +2,6 @@
     <string name="app_name">Peluquería</string>
     <string name="texto_bienvenidaUsuario">Bienvenido usuario@</string>
     <string name="Reservas_principal">Reservas</string>
-    <string name="Mis_daros_de_contacto">Mis dato de contacto:</string>
+    <string name="Mis_daros_de_contacto">Mis datos de contacto:</string>
     <string name="boton_NuevaReserva">Nueva reserva</string>
 </resources>
