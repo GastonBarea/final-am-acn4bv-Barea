@@ -5,33 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/white"
     tools:context=".MainActivity">
-
-    <ScrollView
-        android:id="@+id/scrollViewPrincipal"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:layout_marginBottom="8dp"
-        android:autoSizeTextType="uniform"
-        android:background="#FFFFFF"
-        android:gravity="center"
-        android:hint="En este scrollView vemos las reservas"
-        android:contentDescription="En este scrollView vemos las reservas"
-        app:layout_constraintBottom_toTopOf="@+id/boton_NuevaReserva"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-        </LinearLayout>
-    </ScrollView>
 
     <TextView
         android:id="@+id/bienvenidaUsuario"
@@ -53,7 +28,7 @@
         android:layout_marginBottom="8dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:text="@string/Reservas_principal"
+        android:text="@string/reservas_principal"
         app:layout_constraintBottom_toTopOf="@+id/textViewMisdarosDeContacto"
         app:layout_constraintEnd_toEndOf="@+id/bienvenidaUsuario"
         app:layout_constraintStart_toStartOf="@+id/bienvenidaUsuario" />
@@ -67,7 +42,7 @@
         android:layout_marginBottom="30dp"
         android:autoSizeTextType="uniform"
         android:gravity="left"
-        android:text="@string/Mis_daros_de_contacto"
+        android:text="@string/mis_daros_de_contacto"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toStartOf="@+id/imageButtonEdit"
         app:layout_constraintStart_toStartOf="parent" />
@@ -80,6 +55,7 @@
         android:layout_marginBottom="8dp"
         android:contentDescription="Este es el botón de edición"
         android:hint="Este es el botón de edición"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_edit" />
@@ -88,10 +64,12 @@
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:autoSizeTextType="uniform"
         android:gravity="left"
-        android:text="TextView"
+        android:text="@string/nombre_usuario"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView" />
@@ -110,10 +88,12 @@
         android:id="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="15dp"
         android:autoSizeTextType="uniform"
         android:gravity="left"
-        android:text="TextView"
+        android:text="@string/telefonoContacto_usuario"
         app:layout_constraintBottom_toTopOf="@+id/textViewMiReserva"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.058"
@@ -144,13 +124,38 @@
         app:layout_constraintHorizontal_bias="0.179"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ScrollView
+        android:id="@+id/scrollViewPrincipal"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="8dp"
+        android:autoSizeTextType="uniform"
+        android:background="@color/white"
+        android:contentDescription="En este scrollView vemos las reservas"
+        android:gravity="center"
+        android:hint="En este scrollView vemos las reservas"
+        app:layout_constraintBottom_toTopOf="@+id/boton_NuevaReserva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
     <Button
         android:id="@+id/boton_NuevaReserva"
         android:layout_width="171dp"
         android:layout_height="68dp"
         android:layout_marginBottom="8dp"
         android:onClick="aReserva"
-        android:text="@string/boton_NuevaReserva"
+        android:text="@string/boton_nuevaReserva"
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="@+id/scrollViewPrincipal"
