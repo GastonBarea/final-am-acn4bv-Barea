@@ -1,9 +1,12 @@
 <resources>
+    <!--String de home-->
     <string name="app_name">Peluquería</string>
     <string name="texto_bienvenidaUsuario">Bienvenido usuario@</string>
     <string name="reservas_principal">Reservas</string>
     <string name="mis_daros_de_contacto">Mis datos de contacto:</string>
     <string name="boton_nuevaReserva">Nueva reserva</string>
+    <!--Datos de usuario-->
     <string name="nombre_usuario">Lucas Carrasco</string>
     <string name="telefonoContacto_usuario">1136592187</string>
+
 </resources>

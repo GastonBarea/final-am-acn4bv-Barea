@@ -3,6 +3,7 @@ package com.example.peluquera;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +24,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+
     public void aReserva (View view){
         Log.i("boton_NuevaReserva", "Ganaste");
     }
+
+
+    //clase 3/04  1:11:43 / 1:45:02   https://drive.google.com/file/d/1bNFe0ohDpoUFRaQDyaiFaBycOYcGOPly/view
+
 }
