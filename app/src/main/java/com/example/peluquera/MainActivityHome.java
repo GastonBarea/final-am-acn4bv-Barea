@@ -46,7 +46,7 @@ public class MainActivityHome extends AppCompatActivity {
 
         //Creo el objeto de texto
         TextView myText = new TextView(this);
-        myText.setText("Hola");
+        myText.setText("gaston");
 
 
 

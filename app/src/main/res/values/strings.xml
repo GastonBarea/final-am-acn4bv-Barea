@@ -14,5 +14,13 @@
     <string name="book">Book</string>
     <string name="history">History</string>
 
+    <string name="nombre_comercio">Nombre de Peluquería</string>
+    <string name="fecha_hora_cita">Fecha 19/10/24 Horario: 14:50</string>
+    <string name="servicio_comercio">Servicio: Corte</string>
+    <string name="direccion_comercio">Dirección: Calle 1234, CABA</string>
+    <string name="telefono_comercio">Nuestro teléfono: 1136598744</string>
+
+
+
 
 </resources>
