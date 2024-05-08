@@ -38,27 +38,12 @@
         android:layout_width="296dp"
         android:layout_height="36dp"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginBottom="30dp"
         android:autoSizeTextType="uniform"
         android:gravity="left"
         android:text="@string/mis_daros_de_contacto"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toStartOf="@+id/imageButtonEdit"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButtonEdit"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="Este es el botón de edición"
-        android:hint="Este es el botón de edición"
-        android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_edit" />
 
     <TextView
         android:id="@+id/textView3"

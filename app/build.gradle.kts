@@ -34,6 +34,9 @@ android {
 }
 
 dependencies {
+    //Implementacion para intentar hacer funcionar la toolvar
+    implementation (libs.support.appcompat.v7)
+    implementation (libs.design)
 
     implementation(libs.appcompat)
     implementation(libs.material)

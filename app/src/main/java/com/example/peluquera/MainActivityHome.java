@@ -16,6 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.annotation.NonNull;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivityHome extends AppCompatActivity {
@@ -42,6 +43,12 @@ public class MainActivityHome extends AppCompatActivity {
                 startActivities(new Intent[]{intent});
             }
         });
+
+        //Creo el objeto de texto
+        TextView myText = new TextView(this);
+        myText.setText("Hola");
+
+
 
 //Intentando crear la barra de navegación
         /*bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -72,7 +79,6 @@ public class MainActivityHome extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.bottom_menu, menu);
         return true;
     }
-
 
 
 }
