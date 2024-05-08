@@ -34,22 +34,24 @@ public class MainActivityHome extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
 //Creando botón para ir a buscar reservas
         btn_nuevaReserva = findViewById(R.id.boton_NuevaReserva);
         btn_nuevaReserva.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivityHome.this,MainActivityUser.class);//a donde va
+                Intent intent = new Intent(MainActivityHome.this,MainActivityBuscar.class);
                 startActivities(new Intent[]{intent});
             }
         });
 
+        // TODO: feat: hacer los CardView dinámicos
         //Creo el objeto de texto
         TextView myText = new TextView(this);
         myText.setText("gaston");
 
 
-
+// TODO: feat: ver configurar barra de navegación
 //Intentando crear la barra de navegación
         /*bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
