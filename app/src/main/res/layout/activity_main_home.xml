@@ -19,7 +19,8 @@
         app:layout_constraintBottom_toTopOf="@+id/Titulo_reservas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/Titulo_reservas"
@@ -42,11 +43,11 @@
         android:autoSizeTextType="uniform"
         android:gravity="left"
         android:text="@string/mis_daros_de_contacto"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintBottom_toTopOf="@+id/nombre_usuario"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/nombre_usuario"
         android:layout_width="0dp"
         android:layout_height="34dp"
         android:layout_marginStart="8dp"
@@ -55,7 +56,7 @@
         android:autoSizeTextType="uniform"
         android:gravity="left"
         android:text="@string/nombre_usuario"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toTopOf="@+id/telefono_usuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView" />
 
@@ -65,12 +66,12 @@
         android:layout_height="50dp"
         android:layout_marginStart="15dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/nombre_usuario"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_person_foreground" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/telefono_usuario"
         android:layout_width="0dp"
         android:layout_height="34dp"
         android:layout_marginStart="8dp"
@@ -78,7 +79,7 @@
         android:layout_marginBottom="15dp"
         android:autoSizeTextType="uniform"
         android:gravity="left"
-        android:text="@string/telefonoContacto_usuario"
+        android:text="@string/telefono_usuario"
         app:layout_constraintBottom_toTopOf="@+id/textViewMiReserva"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.058"
@@ -91,7 +92,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/textViewMiReserva"
-        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintEnd_toStartOf="@+id/telefono_usuario"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_call_foreground" />
 
@@ -103,7 +104,7 @@
         android:layout_marginBottom="8dp"
         android:autoSizeTextType="uniform"
         android:gravity="left"
-        android:text="Mi Reserva:"
+        android:text="@string/mi_reserva"
         app:layout_constraintBottom_toTopOf="@+id/scrollViewPrincipal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.179"
@@ -153,7 +154,7 @@
                     android:layout_width="292dp"
                     android:layout_height="35dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:autoSizeTextType="uniform"
                     android:gravity="left"
                     android:text="@string/nombre_comercio"
@@ -164,7 +165,7 @@
                     android:layout_width="268dp"
                     android:layout_height="28dp"
                     android:layout_marginTop="60dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:autoSizeTextType="uniform"
                     android:gravity="left"
                     android:text="@string/fecha_hora_cita"
@@ -186,7 +187,7 @@
                     android:layout_width="291dp"
                     android:layout_height="28dp"
                     android:layout_marginTop="120dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:autoSizeTextType="uniform"
                     android:gravity="left"
                     android:text="@string/direccion_comercio"
@@ -198,7 +199,7 @@
                     android:layout_height="28dp"
                     android:layout_marginTop="150dp"
                     android:layout_marginBottom="20dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:autoSizeTextType="uniform"
                     android:gravity="left"
                     android:text="@string/telefono_comercio"
@@ -212,7 +213,7 @@
         android:layout_width="171dp"
         android:layout_height="68dp"
         android:layout_marginBottom="8dp"
-        android:onClick="aReserva"
+        android:onClick="aReserve"
         android:text="@string/boton_nuevaReserva"
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
