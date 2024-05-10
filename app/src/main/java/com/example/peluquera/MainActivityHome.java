@@ -8,6 +8,7 @@ import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -46,9 +47,10 @@ public class MainActivityHome extends AppCompatActivity {
         });
 
         // TODO: feat: hacer los CardView dinámicos
-        //Creo el objeto de texto
-        TextView myText = new TextView(this);
-        myText.setText("gaston");
+
+        CardView cardView1 = new CardView(this);
+        cardView1.layout(5,5,5,5);
+        cardView1.setPaddingRelative(5,5,0,0);
 
 
 // TODO: feat: ver configurar barra de navegación
@@ -74,6 +76,14 @@ public class MainActivityHome extends AppCompatActivity {
                 return false;
             }
         });*/
+// TODO: feat: aca hay que cargar el nombre de usuario cuando se registre
+
+        TextView nombre_usuario = findViewById(R.id.nombre_usuario);
+        nombre_usuario.setText("Juan Pepe");
+
+        TextView telefono_usuario = findViewById(R.id.telefono_usuario);
+        telefono_usuario.setText("11 2235 5544");
+
     }
 
     @Override
@@ -81,6 +91,5 @@ public class MainActivityHome extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.bottom_menu, menu);
         return true;
     }
-
 
 }

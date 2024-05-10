@@ -6,8 +6,8 @@
     <string name="mis_daros_de_contacto">Mis datos de contacto:</string>
     <string name="boton_nuevaReserva">Nueva reserva</string>
     <!--Datos de usuario-->
-    <string name="nombre_usuario">Lucas Carrasco</string>
-    <string name="telefonoContacto_usuario">1136592187</string>
+    <string name="nombre_usuario">Nombre del usuario</string>
+    <string name="telefono_usuario">Telefono del usuario</string>
 
     <string name="home">Home</string>
     <string name="user">User</string>
@@ -20,8 +20,7 @@
     <string name="servicio_comercio">Servicio: Corte</string>
     <string name="direccion_comercio">Dirección: Calle 1234, CABA</string>
     <string name="telefono_comercio">Nuestro teléfono: 1136598744</string>
-
-
+    <string name="mi_reserva">Mi Reserva:</string>
 
 
 </resources>
