@@ -12,7 +12,8 @@
         android:id="@+id/bienvenidaUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="@string/texto_bienvenidaUsuario"
@@ -26,13 +27,15 @@
         android:id="@+id/Titulo_reservas"
         android:layout_width="217dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
         android:text="@string/reservas_principal"
         app:layout_constraintBottom_toTopOf="@+id/textViewMisdarosDeContacto"
         app:layout_constraintEnd_toEndOf="@+id/bienvenidaUsuario"
-        app:layout_constraintStart_toStartOf="@+id/bienvenidaUsuario" />
+        app:layout_constraintStart_toStartOf="@+id/bienvenidaUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/bienvenidaUsuario" />
 
     <TextView
         android:id="@+id/textViewMisdarosDeContacto"
@@ -144,6 +147,7 @@
                     android:layout_gravity="right"
                     android:layout_marginBottom="8dp"
                     android:background="@color/grey"
+                    android:onClick="cancelar_reserva"
                     android:contentDescription="Este boton es para cancelar la cita"
                     android:hint="Botón cancelar cita"
                     app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
@@ -213,7 +217,6 @@
         android:layout_width="171dp"
         android:layout_height="68dp"
         android:layout_marginBottom="8dp"
-        android:onClick="aReserve"
         android:text="@string/boton_nuevaReserva"
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"

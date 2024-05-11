@@ -48,7 +48,7 @@ public class MainActivityHome extends AppCompatActivity {
 
         // TODO: feat: hacer los CardView dinámicos
 
-        CardView cardView1 = new CardView(this);
+        CardView cardView1 = (CardView) new CardView(this);
         cardView1.layout(5,5,5,5);
         cardView1.setPaddingRelative(5,5,0,0);
 
@@ -76,13 +76,20 @@ public class MainActivityHome extends AppCompatActivity {
                 return false;
             }
         });*/
-// TODO: feat: aca hay que cargar el nombre de usuario cuando se registre
+        // TODO: feat: aca hay que cargar el nombre de usuario cuando se registre
+
+        TextView mensaje_bienvenida = findViewById(R.id.bienvenidaUsuario);
+        mensaje_bienvenida.setText(R.string.texto_bienvenidaUsuario);/*COMO CONCATENO UN TEXTO*/
 
         TextView nombre_usuario = findViewById(R.id.nombre_usuario);
-        nombre_usuario.setText("Juan Pepe");
+        nombre_usuario.setText(R.string.nombre_usuario);
 
         TextView telefono_usuario = findViewById(R.id.telefono_usuario);
-        telefono_usuario.setText("11 2235 5544");
+        telefono_usuario.setText(R.string.telefono_usuario);
+
+
+        // TODO: feat: crear CardView con un metodo y eliminarlo con el botón cancelar_reserva
+
 
     }
 
@@ -91,5 +98,6 @@ public class MainActivityHome extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.bottom_menu, menu);
         return true;
     }
+
 
 }
