@@ -1,5 +1,6 @@
 package com.example.peluquera;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,12 +18,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.annotation.NonNull;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivityHome extends AppCompatActivity {
 
     Button btn_nuevaReserva;
+    Button btn_borrarCard;
     private BottomNavigationView bottomNavigationView;
 
     @Override
@@ -37,8 +40,17 @@ public class MainActivityHome extends AppCompatActivity {
         });
 
 //Creando botón para ir a buscar reservas
-        btn_nuevaReserva = findViewById(R.id.boton_NuevaReserva);
+        Button btn_nuevaReserva = findViewById(R.id.boton_NuevaReserva);
         btn_nuevaReserva.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivityHome.this,MainActivityBuscar.class);
+                startActivities(new Intent[]{intent});
+            }
+        });
+//Creando botón para borrar card
+        ImageButton btn_borrarCard = findViewById(R.id.cancelar_cita);
+        btn_borrarCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivityHome.this,MainActivityBuscar.class);
@@ -51,6 +63,13 @@ public class MainActivityHome extends AppCompatActivity {
         CardView cardView1 = (CardView) new CardView(this);
         cardView1.layout(5,5,5,5);
         cardView1.setPaddingRelative(5,5,0,0);
+
+        TextView datos_en_la_cardView = new TextView(this);
+        datos_en_la_cardView.setWidth(ActionBar.LayoutParams.MATCH_PARENT);
+        datos_en_la_cardView.setHeight(ActionBar.LayoutParams.WRAP_CONTENT);
+        datos_en_la_cardView.setMinLines(3);
+        datos_en_la_cardView.setText(R.string.nombre_usuario);
+        datos_en_la_cardView.append("");
 
 
 // TODO: feat: ver configurar barra de navegación
