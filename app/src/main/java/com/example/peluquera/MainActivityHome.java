@@ -24,8 +24,6 @@ import android.widget.Toast;
 
 public class MainActivityHome extends AppCompatActivity {
 
-    Button btn_nuevaReserva;
-    Button btn_borrarCard;
     private BottomNavigationView bottomNavigationView;
 
     @Override
