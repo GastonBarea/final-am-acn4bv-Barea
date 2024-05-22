@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
@@ -16,9 +17,13 @@ import androidx.core.view.WindowInsetsCompat;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.annotation.NonNull;
 import android.view.MenuItem;
+import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Locale;
 
 public class MainActivityHome extends AppCompatActivity {
 
@@ -38,7 +43,7 @@ public class MainActivityHome extends AppCompatActivity {
 
 //Creando botón para ir a buscar reservas
         btn_nuevaReserva = findViewById(R.id.boton_NuevaReserva);
-        btn_nuevaReserva.setOnClickListener(new View.OnClickListener() {
+        btn_nuevaReserva.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivityHome.this,MainActivityBuscar.class);
@@ -48,9 +53,13 @@ public class MainActivityHome extends AppCompatActivity {
 
         // TODO: feat: hacer los CardView dinámicos
 
-        CardView cardView1 = new CardView(this);
-        cardView1.layout(5,5,5,5);
-        cardView1.setPaddingRelative(5,5,0,0);
+        final CardView cardView1 = (CardView) findViewById(R.id.CardView1);
+
+
+        CardView cardView2 = new CardView(this);
+        cardView2.layout(12,12,12,12);
+        //cardView2.addView();
+
 
 
 // TODO: feat: ver configurar barra de navegación
@@ -85,6 +94,16 @@ public class MainActivityHome extends AppCompatActivity {
         telefono_usuario.setText("11 2235 5544");
 
     }
+
+// TODO: feat eliminar cita
+
+        ImageButton buttonX = findViewById(R.id.cancelar_cita);
+        public void eliminarX(View view){
+
+
+        }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
