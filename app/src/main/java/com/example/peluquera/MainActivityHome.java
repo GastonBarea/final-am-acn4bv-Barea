@@ -97,9 +97,22 @@ public class MainActivityHome extends AppCompatActivity {
 
 // TODO: feat eliminar cita
 
-        //ImageButton buttonX = findViewById(R.id.cancelar_cita);
+    public void eliminarCita (View view){
+        TextView cardView_nombre_peluqueria = findViewById(R.id.cardView_nombre_peluqueria);
+        cardView_nombre_peluqueria.setText("");
 
+        TextView cardView_fecha_horario_cita = findViewById(R.id.cardView_fecha_horario_cita);
+        cardView_fecha_horario_cita.setText("");
 
+        TextView cardView_servicio_tipo = findViewById(R.id.cardView_servicio_tipo);
+        cardView_servicio_tipo.setText("");
+
+        TextView cardView_direccion_peluqueria = findViewById(R.id.cardView_direccion_peluqueria);
+        cardView_direccion_peluqueria.setText("");
+
+        TextView cardView_telefono_peluqueria = findViewById(R.id.cardView_telefono_peluqueria);
+        cardView_telefono_peluqueria.setText("");
+    }
 
 
     @Override
