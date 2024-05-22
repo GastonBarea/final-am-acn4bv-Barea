@@ -97,11 +97,8 @@ public class MainActivityHome extends AppCompatActivity {
 
 // TODO: feat eliminar cita
 
-        ImageButton buttonX = findViewById(R.id.cancelar_cita);
-        public void eliminarX(View view){
+        //ImageButton buttonX = findViewById(R.id.cancelar_cita);
 
-
-        }
 
 
 
