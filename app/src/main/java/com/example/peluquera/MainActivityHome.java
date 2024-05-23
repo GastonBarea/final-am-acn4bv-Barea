@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,15 +52,26 @@ public class MainActivityHome extends AppCompatActivity {
             }
         });
 
+
+
         // TODO: feat: hacer los CardView dinámicos
 
-        final CardView cardView1 = (CardView) findViewById(R.id.CardView1);
+        LinearLayout liner = findViewById(R.id.CardViewLinerLayout);
+        CardView cardView_lacita = new CardView(this);
+        liner.addView(cardView_lacita);
+        TextView texto1 = new TextView(this);
+        TextView texto2 = new TextView(this);
+        texto1.setText("GASTON BAREA");
+        texto2.setText("1133654477");
+        cardView_lacita.addView(texto1);
+        cardView_lacita.addView(texto2);
+        // TODO: feat: aca hay que cargar el nombre de usuario cuando se registre
 
+        TextView nombre_usuario = findViewById(R.id.nombre_usuario);
+        nombre_usuario.setText("Juan Pepe");
 
-        CardView cardView2 = new CardView(this);
-        cardView2.layout(12,12,12,12);
-        //cardView2.addView();
-
+        TextView telefono_usuario = findViewById(R.id.telefono_usuario);
+        telefono_usuario.setText("11 2235 5544");
 
 
 // TODO: feat: ver configurar barra de navegación
@@ -85,13 +97,6 @@ public class MainActivityHome extends AppCompatActivity {
                 return false;
             }
         });*/
-// TODO: feat: aca hay que cargar el nombre de usuario cuando se registre
-
-        TextView nombre_usuario = findViewById(R.id.nombre_usuario);
-        nombre_usuario.setText("Juan Pepe");
-
-        TextView telefono_usuario = findViewById(R.id.telefono_usuario);
-        telefono_usuario.setText("11 2235 5544");
 
     }
 
