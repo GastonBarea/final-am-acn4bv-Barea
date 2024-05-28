@@ -2,12 +2,10 @@ package com.example.peluquera;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
@@ -15,16 +13,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import androidx.annotation.NonNull;
-import android.view.MenuItem;
+
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.Locale;
 
 public class MainActivityHome extends AppCompatActivity {
 
@@ -47,7 +40,7 @@ public class MainActivityHome extends AppCompatActivity {
         btn_nuevaReserva.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivityHome.this,MainActivityBuscar.class);
+                Intent intent = new Intent(MainActivityHome.this, MainActivityOffer.class);
                 startActivities(new Intent[]{intent});
             }
         });
