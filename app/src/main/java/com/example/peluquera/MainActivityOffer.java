@@ -14,7 +14,7 @@ import java.util.List;
 
 public class MainActivityOffer extends AppCompatActivity {
 
-    List<ListElement> elements;
+    List<ListPeluquerias> elements;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -33,18 +33,18 @@ public class MainActivityOffer extends AppCompatActivity {
 
     public  void init() {
         elements = new ArrayList<>();
-        elements.add(new ListElement("#D30000","Pedro", "Mexico", "Activo"));
-        elements.add(new ListElement("#D30000","Juan", "Argentino", "Activo"));
-        elements.add(new ListElement("#D30000","Lucas", "Argentino", "Activo"));
-        elements.add(new ListElement("#D30000","Marcelo", "Argentino", "Activo"));
-        elements.add(new ListElement("#D30000","Jose", "Mexico", "Inactivo"));
-        elements.add(new ListElement("#D30000","Matias", "Colombiano", "Activo"));
-        elements.add(new ListElement("#D30000","Pedro2", "Mexico", "Activo"));
-        elements.add(new ListElement("#D30000","Juan2", "Argentino", "Activo"));
-        elements.add(new ListElement("#D30000","Lucas2", "Argentino", "Activo"));
-        elements.add(new ListElement("#D30000","Marcelo2", "Argentino", "Activo"));
-        elements.add(new ListElement("#D30000","Jose2", "Mexico", "Inactivo"));
-        elements.add(new ListElement("#D30000","Matias2", "Colombiano", "Activo"));
+        elements.add(new ListPeluquerias("#D30000","Pedro", "Mexico", "Activo"));
+        elements.add(new ListPeluquerias("#D30000","Juan", "Argentino", "Activo"));
+        elements.add(new ListPeluquerias("#D30000","Lucas", "Argentino", "Activo"));
+        elements.add(new ListPeluquerias("#D30000","Marcelo", "Argentino", "Activo"));
+        elements.add(new ListPeluquerias("#D30000","Jose", "Mexico", "Inactivo"));
+        elements.add(new ListPeluquerias("#D30000","Matias", "Colombiano", "Activo"));
+        elements.add(new ListPeluquerias("#D30000","Pedro2", "Mexico", "Activo"));
+        elements.add(new ListPeluquerias("#D30000","Juan2", "Argentino", "Activo"));
+        elements.add(new ListPeluquerias("#D30000","Lucas2", "Argentino", "Activo"));
+        elements.add(new ListPeluquerias("#D30000","Marcelo2", "Argentino", "Activo"));
+        elements.add(new ListPeluquerias("#D30000","Jose2", "Mexico", "Inactivo"));
+        elements.add(new ListPeluquerias("#D30000","Matias2", "Colombiano", "Activo"));
 
         ListAdapter listAdapter = new ListAdapter(elements, this);
         RecyclerView recyclerView = findViewById(R.id.listRecyclerView);

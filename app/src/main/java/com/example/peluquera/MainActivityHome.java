@@ -47,7 +47,7 @@ public class MainActivityHome extends AppCompatActivity {
 
 
 
-        // TODO: feat: hacer los CardView dinámicos
+        // TODO: feat: hacer los CardView dinámicos - prueba 1
 
         LinearLayout liner = findViewById(R.id.CardViewLinerLayout);
         CardView cardView_lacita = new CardView(this);
@@ -58,11 +58,11 @@ public class MainActivityHome extends AppCompatActivity {
         texto2.setText("1133654477");
         cardView_lacita.addView(texto1);
         cardView_lacita.addView(texto2);
-        // TODO: feat: aca hay que cargar el nombre de usuario cuando se registre
+
+        // TODO: feat: aca hay que cargar el nombre de usuario cuando se registre - prueba 2
 
         TextView nombre_usuario = findViewById(R.id.nombre_usuario);
         nombre_usuario.setText("Juan Pepe");
-
         TextView telefono_usuario = findViewById(R.id.telefono_usuario);
         telefono_usuario.setText("11 2235 5544");
 
@@ -95,7 +95,8 @@ public class MainActivityHome extends AppCompatActivity {
 
 // TODO: feat eliminar cita
 
-    public void eliminarCita (View view){
+    public void eliminarCita (View view){/*Escucha el metodo creado en el xml*/
+
         TextView cardView_nombre_peluqueria = findViewById(R.id.cardView_nombre_peluqueria);
         cardView_nombre_peluqueria.setText("");
 

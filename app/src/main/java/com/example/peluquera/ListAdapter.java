@@ -9,24 +9,23 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.core.content.res.ColorStateListInflaterCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
-    private List<ListElement> mData;
+    private List<ListPeluquerias> mData;
     private LayoutInflater mInflater;
     private Context context;
 
-    public ListAdapter(List<ListElement>itemList, Context context) {
+    public ListAdapter(List<ListPeluquerias>itemList, Context context) {
         this.mInflater = LayoutInflater.from(context);
         this.context = context;
         this.mData = itemList;
     }
 
     @Override
-    public int getItemCount() {return mData.size();}/*da el tamaño de la lista*/
+    public int getItemCount() {return mData.size();}/*Da el tamaño de la lista*/
 
     @Override
     public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
@@ -38,7 +37,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         holder.bindData(mData.get(position));
     }
 
-    public void  setItems(List<ListElement> items) { mData = items;}
+    public void  setItems(List<ListPeluquerias> items) { mData = items;}
     public class ViewHolder extends RecyclerView.ViewHolder{
         ImageView iconImage;
         TextView name, city, status;
@@ -51,7 +50,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             status = itemView.findViewById(R.id.statusTextView);
         }
 
-        void bindData(final ListElement item){
+        void bindData(final ListPeluquerias item){
             iconImage.setColorFilter(Color.parseColor(item.getColor()), PorterDuff.Mode.SRC_IN);
             name.setText(item.getName());
             city.setText(item.getCity());

@@ -1,13 +1,13 @@
 package com.example.peluquera;
 
-public class ListElement {
+public class ListPeluquerias {
     public String color;
     public String name;
     public String city;
     public String status;
 
 
-    public ListElement(String color, String name, String city, String status) {
+    public ListPeluquerias(String color, String name, String city, String status) {
         this.color = color;
         this.name = name;
         this.city = city;
