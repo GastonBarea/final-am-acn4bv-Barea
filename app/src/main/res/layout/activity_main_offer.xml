@@ -2,15 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/offer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MainActivityOffer">
+    tools:context="com.example.peluqueria.MainActivityOffer">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/cuerpo_favoritos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,47 +21,99 @@
         <TextView
             android:id="@+id/bienvenidaUsuario"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="25dp"
             android:autoSizeTextType="uniform"
             android:gravity="center"
-            android:text="@string/texto_bienvenidaUsuario" />
+            android:text="@string/texto_bienvenidaUsuario"
+            android:layout_margin="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/Titulo_reservas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/Titulo_reservas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="60dp"
+            android:layout_marginBottom="8dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+            android:text="@string/titulo_ofertas"
+            app:layout_constraintBottom_toTopOf="@+id/bienvenidaUsuario"
+            app:layout_constraintEnd_toEndOf="@+id/bienvenidaUsuario"
+            app:layout_constraintStart_toStartOf="@+id/bienvenidaUsuario"
+            app:layout_constraintTop_toBottomOf="@+id/bienvenidaUsuario" />
 
-            <TextView
-                android:id="@+id/Titulo_reservas"
-                android:layout_width="164dp"
-                android:layout_height="32dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="30dp"
-                android:autoSizeTextType="uniform"
-                android:gravity="center"
-                android:text="@string/reservas_principal"
-                android:textSize="14sp" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="80dp">
 
-            <ImageButton
-                android:id="@+id/ir_a_filtro"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="50dp"
-                android:contentDescription="Este boton es para ir al filtro"
-                android:hint="Boton filtro"
-                app:srcCompat="@android:drawable/ic_dialog_map" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-        </LinearLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listRecyclerView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        </FrameLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/botonera"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/button_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Este boton es para cancelar la cita"
+            android:hint="Botón cancelar cita"
+            app:srcCompat="@drawable/ic_home_foreground"
+            app:tint="@color/black" />
+
+        <ImageButton
+            android:id="@+id/button_books"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Este boton es para cancelar la cita"
+            android:hint="Botón cancelar cita"
+            app:srcCompat="@drawable/ic_book_foreground"
+            app:tint="@color/black" />
+
+        <ImageButton
+            android:id="@+id/button_user"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Este boton es para cancelar la cita"
+            android:hint="Botón cancelar cita"
+            app:srcCompat="@drawable/ic_person_foreground"
+            app:tint="@color/black" />
+
+        <ImageButton
+            android:id="@+id/button_history"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:contentDescription="Este boton es para cancelar la cita"
+            android:hint="Botón cancelar cita"
+            app:srcCompat="@drawable/ic_history_foreground"
+            app:tint="@color/black" />
+
+    </LinearLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

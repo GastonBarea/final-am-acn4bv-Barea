@@ -13,9 +13,6 @@
         android:theme="@style/Theme.Peluquería"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivityHistory"
             android:exported="false" />
         <activity
@@ -32,7 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.peluquera.MainActivityOffer" />
+        <activity android:name="com.example.peluqueria.MainActivityOffer" />
     </application>
 
 </manifest>

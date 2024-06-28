@@ -1,8 +1,7 @@
-package com.example.peluquera;
+package com.example.peluqueria;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 
 import androidx.activity.EdgeToEdge;
@@ -11,31 +10,33 @@ import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivityHome extends AppCompatActivity {
 
+    ImageButton btn_home;
+    ImageButton btn_books;
+    ImageButton btn_user;
+    ImageButton btn_history;
     Button btn_nuevaReserva;
-    private BottomNavigationView bottomNavigationView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+        //EdgeToEdge.enable(this);/*GENERA PANTALLA COMPLETA*/
         setContentView(R.layout.activity_main_home);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.menu), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.home_page), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-//Creando botón para ir a buscar reservas
+//Boton "Nueva Reserva" ---------------------------------------------------
         btn_nuevaReserva = findViewById(R.id.boton_NuevaReserva);
         btn_nuevaReserva.setOnClickListener(new OnClickListener() {
             @Override
@@ -45,6 +46,44 @@ public class MainActivityHome extends AppCompatActivity {
             }
         });
 
+//BOTONERA ---------------------------------------------------
+        btn_home = findViewById(R.id.button_home);
+        btn_home.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivityHome.this, MainActivityHome.class);
+                startActivities(new Intent[]{intent});
+            }
+        });
+
+        btn_books = findViewById(R.id.button_books);
+        btn_books.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivityHome.this, MainActivityBook.class);
+                startActivities(new Intent[]{intent});
+            }
+        });
+
+        btn_user = findViewById(R.id.button_user);
+        btn_user.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivityHome.this, MainActivityUser.class);
+                startActivities(new Intent[]{intent});
+            }
+        });
+
+        btn_history = findViewById(R.id.button_history);
+        btn_history.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivityHome.this, MainActivityHistory.class);
+                startActivities(new Intent[]{intent});
+            }
+        });
+
+//FIN BOTONERA ---------------------------------------------
 
 
         // TODO: feat: hacer los CardView dinámicos - prueba 1
@@ -67,29 +106,6 @@ public class MainActivityHome extends AppCompatActivity {
         telefono_usuario.setText("11 2235 5544");
 
 
-// TODO: feat: ver configurar barra de navegación
-//Intentando crear la barra de navegación
-        /*bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.home:
-                        Toast.makeText(MainActivityHome.this, "Home seleccionado", Toast.LENGTH_SHORT).show();
-                        return true;
-                    case R.id.book:
-                        Toast.makeText(MainActivityHome.this, "Book seleccionado", Toast.LENGTH_SHORT).show();
-                        return true;
-                    case R.id.user:
-                        Toast.makeText(MainActivityHome.this, "User seleccionado", Toast.LENGTH_SHORT).show();
-                        return true;
-                    case R.id.history:
-                        Toast.makeText(MainActivityHome.this, "History seleccionado", Toast.LENGTH_SHORT).show();
-                        return true;
-                }
-                return false;
-            }
-        });*/
 
     }
 
@@ -113,11 +129,5 @@ public class MainActivityHome extends AppCompatActivity {
         cardView_telefono_peluqueria.setText("");
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.bottom_menu, menu);
-        return true;
-    }
 
 }
