@@ -1,14 +1,22 @@
 <resources>
     <!--String de home-->
     <string name="app_name">Peluquería</string>
-    <string name="texto_bienvenidaUsuario">Bienvenido </string>
-    <string name="reservas_principal">Reservas</string>
+    <string name="texto_bienvenidaUsuario">App Peluquería</string>
     <string name="mis_daros_de_contacto">Mis datos de contacto:</string>
     <string name="boton_nuevaReserva">Nueva reserva</string>
+
     <!--Datos de usuario-->
     <string name="nombre_usuario">Nombre del usuario</string>
     <string name="telefono_usuario">Telefono del usuario</string>
 
+    <!--TITULOS DE PÁGINAS -->
+    <string name="titulo_principal">Reservas</string>
+    <string name="titulo_book">Biblioteca</string>
+    <string name="titulo_history">Historial de reservas:</string>
+    <string name="titulo_user">Editar Usuario</string>
+    <string name="titulo_ofertas">Peluquerías:</string>
+
+    <!-- -->
     <string name="home">Home</string>
     <string name="user">User</string>
     <string name="book">Book</string>

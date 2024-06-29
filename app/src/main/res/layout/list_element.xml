@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cv"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:animateLayoutChanges="true"
-    android:layout_margin="5dp"
+    android:layout_margin="0dp"
     app:cardBackgroundColor="@color/grey"
-    app:cardCornerRadius="20dp"
-    app:cardElevation="4dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="1dp"
     app:cardUseCompatPadding="true">
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,7 +21,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="6dp">
+                android:padding="6dp"
+                android:background="@color/green">
                 <ImageView
                     android:id="@+id/iconImageView"
                     android:layout_width="70dp"
@@ -30,8 +32,7 @@
                     android:layout_gravity="center"
                     android:paddingLeft="14dp"
                     android:paddingRight="14dp"
-                    app:srcCompat="@mipmap/ic_tijera_peine_foreground"
-                    android:layout_alignParentLeft="true">
+                    app:srcCompat="@mipmap/ic_tijera_peine_foreground">
 
                 </ImageView>
                 <LinearLayout
@@ -44,10 +45,11 @@
                     android:layout_toEndOf="@+id/iconImageView"
                     android:orientation="vertical"
                     android:layout_marginLeft="4dp"
-                    android:layout_toRightOf="@+id/iconImageView">
+                    android:layout_toRightOf="@+id/iconImageView"
+                    tools:ignore="ExtraText">
 
                     <TextView
-                        android:id="@+id/nameTextview"
+                        android:id="@+id/nombreTextview"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="2dp"
@@ -56,29 +58,60 @@
                         android:textSize="24sp"
                         android:textStyle="bold"/>
                     <TextView
-                        android:id="@+id/cityTextView"
+                        android:id="@+id/horariosTextView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Argentina"
+                        android:text="Horarios: L a V de 8 a 20Hs."
                         android:textColor="@color/black"
                         android:textSize="18sp"/>
+                    <TextView
+                        android:id="@+id/serviciosTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Servicios: Corte, Tintura, Alisado"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:id="@+id/direccionTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Calle 1234, Localidad"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"/>
+                    <TextView
+                        android:id="@+id/telefonoTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Consultar al: 1133335555"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:autoLink="phone"/>
+                    <TextView
+                        android:id="@+id/correoTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="usuario@peluqueria.com"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:autoLink="email"/>
+
 
 
                 </LinearLayout>
 
-                <TextView
+                <ImageView
                     android:id="@+id/statusTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="47dp"
+                    android:layout_height="56dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="6dp"
-                    android:layout_marginRight="6dp"
-                    android:text="activo"
+                    android:layout_marginEnd="1dp"
+                    android:contentDescription="book"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    app:srcCompat="@mipmap/ic_book">
+                </ImageView>
+
             </RelativeLayout>
 
         </LinearLayout>

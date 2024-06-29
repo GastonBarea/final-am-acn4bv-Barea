@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.peluquera"
+    namespace = "com.example.peluqueria"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.peluquera"
+        applicationId = "com.example.peluqueria"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
